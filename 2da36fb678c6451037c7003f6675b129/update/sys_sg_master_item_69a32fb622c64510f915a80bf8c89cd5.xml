@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_master_item">
+    <sys_sg_master_item action="INSERT_OR_UPDATE">
+        <condition_order/>
+        <datasource_table>incident</datasource_table>
+        <datasource_table_condition/>
+        <embedded_screen/>
+        <item_view/>
+        <name>Test2 on Incident table Main Item</name>
+        <sys_class_name>sys_sg_master_item</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:37</sys_created_on>
+        <sys_id>69a32fb622c64510f915a80bf8c89cd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test2 on Incident table Main Item</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_master_item_69a32fb622c64510f915a80bf8c89cd5</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:37</sys_updated_on>
+        <use_view_config>true</use_view_config>
+        <view_config/>
+    </sys_sg_master_item>
+</record_update>

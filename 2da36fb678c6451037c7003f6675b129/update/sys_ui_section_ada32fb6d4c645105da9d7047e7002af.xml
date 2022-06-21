@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="ada32fb6d4c645105da9d7047e7002af" sys_domain="global" table="x_snc_we_volunteer_event" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>e5a32fb650c64510f43ab0384f3de2a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <position>1</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>2da32fb63cc6451032f6188be09740a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_from</element>
+            <position>2</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>6da32fb6b9c64510550a789e8c3c8fa9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_to</element>
+            <position>3</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>69a32fb6aac64510059f6bb1ffd868a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>a9a32fb64ec64510df38d6339f9739a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>5</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>29a32fb60dc64510f8e517f783e8f1a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>organizer</element>
+            <position>6</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>e9a32fb6b9c64510396ded54ac7941a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>event_reminder_date</element>
+            <position>7</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>e1a32fb6c8c64510166065eb4d57ada9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>published</element>
+            <position>8</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>21a32fb643c64510b808f331fdebaea9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>65a32fb68bc64510498671f4b719a2a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>event_name</element>
+            <position>10</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>61a32fb672c64510a33928a23e18bda9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>purpose</element>
+            <position>11</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>ada32fb654c645106858acf567a7e5a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>12</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>25a32fb67dc645109ab386c9810ce6a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>capacity</element>
+            <position>13</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>a5a32fb6ffc64510c30f62c7c256aaa9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendees</element>
+            <position>14</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>a1a32fb623c645108b4825697779fea9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>percent_full</element>
+            <position>15</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>eda32fb65dc645101eea698bf72ee0a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>spaces_left</element>
+            <position>16</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>2da32fb65ec64510c4bbecb1409b88a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>is_full</element>
+            <position>17</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>e9a32fb60bc645106efd5a6e4e694ca8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>18</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>a9a32fb670c645100ca466aec85ebea8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>waitlist_size</element>
+            <position>19</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>69a32fb686c6451090395d8f8f9e64a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>waitlisted</element>
+            <position>20</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>6da32fb63bc64510952bec807dde19a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>image</element>
+            <position>21</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>65a32fb6b7c645103669d6dbfe040fa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>22</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>25a32fb6d4c64510ccea375cb37a11a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>comments</element>
+            <position>23</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>a5a32fb69ac64510d704dfb79a8019a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>24</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>e5a32fb694c645108807951785565fa8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>25</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_id>29a32fb60cc6451040e8ce12883834a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="">e9a32fb66dc64510c69466bbdf49e7ab</sys_ui_formatter>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_we_volunteer_event</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ada32fb6d4c645105da9d7047e7002af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_we_volunteer_event</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_ui_section_ada32fb6d4c645105da9d7047e7002af</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:34</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Exibição padrão" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

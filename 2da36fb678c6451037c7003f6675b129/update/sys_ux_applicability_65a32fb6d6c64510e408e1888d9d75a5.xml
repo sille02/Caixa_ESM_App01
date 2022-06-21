@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_snc_we_volunteer.Event Registration Organizers</api_name>
+        <description>Event Registration Organizers</description>
+        <name>Event Registration Organizers</name>
+        <roles name="x_snc_we_volunteer.event_reg.organizer">a5a36fb6ebc6451083dd3bf7f7fed429</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>65a32fb6d6c64510e408e1888d9d75a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Registration Organizers</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_applicability_65a32fb6d6c64510e408e1888d9d75a5</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:23</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

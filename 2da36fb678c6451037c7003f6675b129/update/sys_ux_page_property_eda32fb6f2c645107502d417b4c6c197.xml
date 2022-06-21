@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices>null</choices>
+        <description>Comes from table: sys_search_context_config</description>
+        <name>globalSearchDataConfigId</name>
+        <page display_value="x_snc_we_volunteer Workspace">a1a32fb67cc64510adc6b34b50fb4e98</page>
+        <required_translations>[]</required_translations>
+        <route display_value="">null</route>
+        <suffix>null</suffix>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>eda32fb6f2c645107502d417b4c6c197</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>globalSearchDataConfigId</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy>null</sys_policy>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_page_property_eda32fb6f2c645107502d417b4c6c197</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:37</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_snc_we_volunteer.b9f3568045786010f877b700bf69670e.root.globalSearchDataConfigId</unique_name>
+        <value>e1a32fb687c64510665e622ad1bcc9b5</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=eda32fb6f2c645107502d417b4c6c197"/>
+</record_update>

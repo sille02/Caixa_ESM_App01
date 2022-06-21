@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_form_screen">
+    <sys_sg_form_screen action="INSERT_OR_UPDATE">
+        <alert/>
+        <available_offline>false</available_offline>
+        <data_item/>
+        <description/>
+        <dynamic_prefetch_count/>
+        <empty_state/>
+        <fetch_type>not_required</fetch_type>
+        <filter/>
+        <hide_filters>false</hide_filters>
+        <hide_screen_name>false</hide_screen_name>
+        <icon display_value="All Events Copy Embedded Form Icon">e9a32fb6acc6451015c5edfd8f92e6dc</icon>
+        <item_view display_value="All Events Item View">a9a32fb656c64510b9144f874d4d69dc</item_view>
+        <name>All Events</name>
+        <override_context_with_data_item>false</override_context_with_data_item>
+        <roles_override>x_snc_we_volunteer.event_reg.admin,x_snc_we_volunteer.event_reg.attendee,x_snc_we_volunteer.event_reg.organizer</roles_override>
+        <segments_height>small</segments_height>
+        <segments_min_width>small</segments_min_width>
+        <sys_class_name>sys_sg_form_screen</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:01</sys_created_on>
+        <sys_id>ada32fb6fac64510bc60aa62534951df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All Events</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_form_screen_ada32fb6fac64510bc60aa62534951df</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:01</sys_updated_on>
+        <table>x_snc_we_volunteer_event</table>
+        <use_view_config>true</use_view_config>
+        <view_config display_value="All Events Copy Embedded Form View Config">29a32fb6fec64510713fe30195c3d2dc</view_config>
+    </sys_sg_form_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=ada32fb6fac64510bc60aa62534951df"/>
+</record_update>

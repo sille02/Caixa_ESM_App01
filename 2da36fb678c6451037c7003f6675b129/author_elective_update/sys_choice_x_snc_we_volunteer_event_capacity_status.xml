@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="capacity_status" table="x_snc_we_volunteer_event" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>capacity_status</element>
+            <name>x_snc_we_volunteer_event</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2022-03-10 10:35:00</sys_created_on>
+            <sys_id>65c367f687c6451095b065773cbb353f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>capacity_status</sys_name>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_choice_x_snc_we_volunteer_event_capacity_status</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:06</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>capacity_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Seats Available</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>21a36fb64ac6451050ba1550c0cf791d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:05</sys_updated_on>
+            <value>seats_avail</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>capacity_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Full</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>61a36fb6d8c6451080c23a7a14cc911d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:06</sys_updated_on>
+            <value>full</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

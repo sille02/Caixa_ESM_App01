@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="Edit Button (Attendee)">69a32fb688c645105b89c822628ee4e6</button>
+        <item_parameter display_value="Organizer Notes">a1a32fb63cc64510e122301d2c66e5e6</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:06</sys_created_on>
+        <sys_id>a5a32fb6cec64510bdafa65b35f1cde6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a1a32fb63cc64510e122301d2c66e5e6</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_a5a32fb6cec64510bdafa65b35f1cde6</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:06</sys_updated_on>
+        <ui_parameter display_value="Organizer Notes">2da32fb62cc645102bcbc1ac76bf9ae6</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

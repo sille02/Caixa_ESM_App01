@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action_layout_item">
+    <sys_ux_form_action_layout_item action="INSERT_OR_UPDATE">
+        <action display_value="Cancel Event">25a32fb64dc645106b632d08393e3d9a</action>
+        <active>true</active>
+        <color/>
+        <description/>
+        <item_type>action</item_type>
+        <label>Cancel Event</label>
+        <layout_group/>
+        <name>cancel_event</name>
+        <order>1</order>
+        <overflow>false</overflow>
+        <sys_class_name>sys_ux_form_action_layout_item</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:58</sys_created_on>
+        <sys_id>69a32fb6e3c645101ca2d33d386a7399</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel Event</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_form_action_layout_item_69a32fb6e3c645101ca2d33d386a7399</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:58</sys_updated_on>
+        <table>x_snc_we_volunteer_event</table>
+    </sys_ux_form_action_layout_item>
+</record_update>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Events dashboard">e1a32fb6a6c64510fbd3e482f64a10a0</macroponent>
+        <name>Upcoming Event Card Handler</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({api, event, helpers, imports}) {
+    var length = api.data.transform_upcoming_events_1.output.length;
+    if(length >= 3){
+        api.setState('hideCard1', false);
+        api.setState('hideCard2', false);
+        api.setState('hideCard3', false);
+    }
+    else if(length == 2){
+        api.setState('hideCard1', false);
+        api.setState('hideCard2', false);
+    }
+    else if(length == 1){
+        api.setState('hideCard1', false);
+    }
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:29</sys_created_on>
+        <sys_id>25a32fb63cc64510a58df55de8a682a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Upcoming Event Card Handler</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_client_script_25a32fb63cc64510a58df55de8a682a0</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:29</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

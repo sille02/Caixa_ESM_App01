@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_ui_rule_action">
+    <sys_sg_ui_rule_action action="INSERT_OR_UPDATE">
+        <operation display_value="Definir estilo de IU">1fc6ba105b431010da168d8fa881c7bb</operation>
+        <order/>
+        <sys_class_name>sys_sg_ui_rule_action</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:39</sys_created_on>
+        <sys_id>ada32fb666c6451003503fee9c1bafc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_ui_rule_action_ada32fb666c6451003503fee9c1bafc7</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:39</sys_updated_on>
+        <target>view_group_04</target>
+        <ui_rule display_value="State is Draft">e5a32fb6d4c6451089b1801be4d3aec9</ui_rule>
+        <value>{"BackgroundColor":"FDF3AC"}</value>
+    </sys_sg_ui_rule_action>
+</record_update>

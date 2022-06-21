@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_view_config_element">
+    <sys_sg_view_config_element action="INSERT_OR_UPDATE">
+        <name>All Events Copy View Config Element</name>
+        <sys_class_name>sys_sg_view_config_element</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:16</sys_created_on>
+        <sys_id>29a32fb615c64510084a24cf24e8b9c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All Events Copy View Config Element</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_view_config_element_29a32fb615c64510084a24cf24e8b9c3</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:16</sys_updated_on>
+        <view_config display_value="All Events Copy View Config">e9a32fb6c3c64510bc9d877659691ccf</view_config>
+        <view_template_slot display_value="text_20">25a32fb628c64510f040aabec9b527c7</view_template_slot>
+    </sys_sg_view_config_element>
+</record_update>

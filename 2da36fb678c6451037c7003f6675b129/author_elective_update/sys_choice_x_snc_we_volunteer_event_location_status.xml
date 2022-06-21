@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="status" table="x_snc_we_volunteer_event_location" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>status</element>
+            <name>x_snc_we_volunteer_event_location</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2022-03-10 10:35:00</sys_created_on>
+            <sys_id>8cc3a3f687c6451095b065773cbb35b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>status</sys_name>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_choice_x_snc_we_volunteer_event_location_status</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:59</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Available</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event_location</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65a36fb639c6451048311c5819c7eb1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:59</sys_updated_on>
+            <value>available</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Temporarily Unavailable</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event_location</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25a36fb634c6451042973e36a26e1d1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:59</sys_updated_on>
+            <value>temp_unavailable</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Closed</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event_location</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e1a36fb61ac645100b71b2dabd8d2f1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:59</sys_updated_on>
+            <value>closed</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

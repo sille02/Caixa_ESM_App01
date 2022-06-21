@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="2da32fb6d7c645108ca9771bfb8dd0af" sys_domain="global" table="x_snc_we_volunteer_event_location" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a9a32fb6d6c645102c70e1491b04a6af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_we_volunteer_event_location" name="x_snc_we_volunteer_event_location" sys_domain="global" view="Default view">2da32fb6d7c645108ca9771bfb8dd0af</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event_location" sys_domain="global" view="Default view">e9a32fb624c64510a1d93da938c4f7af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:51</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69a32fb66ec64510f2d5d5c6557175af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_we_volunteer_event_location" name="x_snc_we_volunteer_event_location" sys_domain="global" view="Default view">2da32fb6d7c645108ca9771bfb8dd0af</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Anotações" name="x_snc_we_volunteer_event_location" sys_domain="global" view="Default view">29a32fb6a8c645104e53bc8cd58b3faf</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:51</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_we_volunteer_event_location</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2da32fb6d7c645108ca9771bfb8dd0af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_we_volunteer_event_location</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_ui_form_sections_2da32fb6d7c645108ca9771bfb8dd0af</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:51</sys_updated_on>
+            <sys_user/>
+            <view display_value="Exibição padrão" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

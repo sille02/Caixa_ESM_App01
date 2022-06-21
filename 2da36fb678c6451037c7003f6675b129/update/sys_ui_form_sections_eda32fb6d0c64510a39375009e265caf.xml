@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="eda32fb6d0c64510a39375009e265caf" sys_domain="global" table="x_snc_we_volunteer_event" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6da32fb6b3c645104f2cab1f56b3e2af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_snc_we_volunteer_event" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">eda32fb6d0c64510a39375009e265caf</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_event" sys_domain="global" view="Default view">ada32fb6d4c645105da9d7047e7002af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:55</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_snc_we_volunteer_event</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:26:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eda32fb6d0c64510a39375009e265caf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_we_volunteer_event</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_ui_form_sections_eda32fb6d0c64510a39375009e265caf</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:26:55</sys_updated_on>
+            <sys_user/>
+            <view display_value="Exibição padrão" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

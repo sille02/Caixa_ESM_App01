@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="65a32fb68ec6451047303f33ef3c45af" sys_domain="global" table="x_snc_we_volunteer_attendee" version="3" view="workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>event_name</element>
+            <position>0</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_id>ada32fb6f8c64510feae511f53d620aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_attendee" sys_domain="global" view="b4049b121bb20110909c2fc13b4bcb0d">65a32fb68ec6451047303f33ef3c45af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendee_name</element>
+            <position>1</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_id>61a32fb658c645101771ef86bb96f8ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_attendee" sys_domain="global" view="b4049b121bb20110909c2fc13b4bcb0d">65a32fb68ec6451047303f33ef3c45af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_id>21a32fb6c4c6451090671c19545349ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_attendee" sys_domain="global" view="b4049b121bb20110909c2fc13b4bcb0d">65a32fb68ec6451047303f33ef3c45af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>attendee_status</element>
+            <position>3</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_id>6da32fb637c645105617cdfb8a9f83aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_attendee" sys_domain="global" view="b4049b121bb20110909c2fc13b4bcb0d">65a32fb68ec6451047303f33ef3c45af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>date_submitted</element>
+            <position>4</position>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_id>e9a32fb67fc645105111379c0ec2dfaa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_snc_we_volunteer_attendee" sys_domain="global" view="b4049b121bb20110909c2fc13b4bcb0d">65a32fb68ec6451047303f33ef3c45af</sys_ui_section>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_snc_we_volunteer_attendee</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65a32fb68ec6451047303f33ef3c45af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_snc_we_volunteer_attendee</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_ui_section_65a32fb68ec6451047303f33ef3c45af</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:38</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Espaço de trabalho" name="workspace">b4049b121bb20110909c2fc13b4bcb0d</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

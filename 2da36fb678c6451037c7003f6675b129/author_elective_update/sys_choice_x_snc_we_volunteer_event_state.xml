@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="state" table="x_snc_we_volunteer_event" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <name>x_snc_we_volunteer_event</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2022-03-10 10:35:00</sys_created_on>
+            <sys_id>41d36bf687c6451095b065773cbb35c7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>state</sys_name>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_choice_x_snc_we_volunteer_event_state</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Draft</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6da36fb67dc6451068d96e40485ebf1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+            <value>-5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Published</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ada36fb655c6451003a885aa36a01a1c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Rescheduled</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a9a36fb604c645109232b448954b931c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2da36fb606c6451054727f0ea3c5201c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Expired</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_event</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69a36fb686c64510615f46c6a092b51c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:20</sys_updated_on>
+            <value>20</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

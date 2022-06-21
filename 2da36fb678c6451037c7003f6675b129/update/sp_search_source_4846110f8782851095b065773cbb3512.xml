@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_search_source">
+    <sp_search_source action="INSERT_OR_UPDATE">
+        <advanced_typeahead_config>false</advanced_typeahead_config>
+        <condition table="x_snc_we_volunteer_event">state=1^ORstate=2^EQ<item display_value="Published" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item display_value="Rescheduled" endquery="false" field="state" goto="false" newquery="false" operator="=" or="true" value="2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <data_fetch_script/>
+        <display_fields>location,organizer,date_from,date_to,spaces_left</display_fields>
+        <enable_typeahead>true</enable_typeahead>
+        <facet_generation_script/>
+        <id>volunteer_events</id>
+        <is_scripted_source>false</is_scripted_source>
+        <name>We Volunteer Events</name>
+        <page/>
+        <pagination_supported>true</pagination_supported>
+        <primary_display_field>event_name</primary_display_field>
+        <roles/>
+        <search_page_template><![CDATA[<div>
+  <a href="?id=form&sys_id={{item.sys_id}}&table={{item.table}}" class="h4 text-primary m-b-sm block">
+    <span ng-bind-html="highlight(item.primary, data.q)"></span>
+  </a>
+  <span class="text-muted" ng-repeat="f in item.fields">
+    <span class="m-l-xs m-r-xs" ng-if="!$first"> &middot; </span>
+    {{f.label}}: <span ng-bind-html="highlight(f.display_value, data.q)"></span>
+  </span>
+</div>]]></search_page_template>
+        <source_table>x_snc_we_volunteer_event</source_table>
+        <sys_class_name>sp_search_source</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 19:53:43</sys_created_on>
+        <sys_id>4846110f8782851095b065773cbb3512</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>We Volunteer Events</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sp_search_source_4846110f8782851095b065773cbb3512</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 19:53:43</sys_updated_on>
+        <typeahead_glyph/>
+        <typeahead_template/>
+    </sp_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=4846110f8782851095b065773cbb3512"/>
+</record_update>

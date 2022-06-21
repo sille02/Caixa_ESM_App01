@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_facet">
+    <sys_search_facet action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <ais_facet_name>x_snc_we_volunteer_event.capacity_status</ais_facet_name>
+        <label>Capacity</label>
+        <name>Full</name>
+        <option_limit>10</option_limit>
+        <order>300</order>
+        <search_context_config display_value="We volunteer - Event Registration Search App">25a32fb6b9c645109adeafedfe1c03b5</search_context_config>
+        <sys_class_name>sys_search_facet</sys_class_name>
+        <sys_created_by>maint</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:40</sys_created_on>
+        <sys_id>eda32fb61dc64510da4926639e59b194</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_snc_we_volunteer_event.capacity_status</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_search_facet_eda32fb61dc64510da4926639e59b194</sys_update_name>
+        <sys_updated_by>jared.prim</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:40</sys_updated_on>
+    </sys_search_facet>
+</record_update>

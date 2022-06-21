@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <includes/>
+        <macroponent display_value="Search">29a32fb612c64510824ef575df6d86a0</macroponent>
+        <name>Handle Pagination</name>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function({
+    api,
+    event,
+    helpers
+}) {
+    const props = api.context.props;
+    const fields = {
+        searchContextConfigId: props.searchContextConfigId
+    };
+    const token = event.payload.paginationToken;
+    const params = {
+        searchTerm: props.searchTerm,
+        searchFilters: props.searchFilters,
+        facetFilters: props.facetFilters,
+        disableSpellCheck: props.disableSpellCheck,
+        paginationToken: token
+    };
+    helpers.navigate.to('search', fields, params);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:42</sys_created_on>
+        <sys_id>a9a32fb6e7c645104cf12bf01852469e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Handle Pagination</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_client_script_a9a32fb6e7c645104cf12bf01852469e</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:42</sys_updated_on>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

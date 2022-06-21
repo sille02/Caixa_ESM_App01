@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_genius_result_configuration">
+    <ais_genius_result_configuration action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <handler_type>search</handler_type>
+        <name>Event Registration Genius Results</name>
+        <return_fields>event_name,date_from,date_to,purpose,is_full,spaces_left,waitlisted,organizer</return_fields>
+        <script><![CDATA[function process(context) {
+	var answer = new sn_ais.GeniusResultAnswer();
+
+	answer.setTable('x_snc_we_volunteer_event');
+	answer.setSearchLimit(5);
+	var predictionResult = context.getPredictionResult();
+	if (predictionResult && predictionResult.length == 1) {
+		var detail = predictionResult[0];
+		if (detail['result'] && detail['result']['entities']) {
+			var entities = detail['result']['entities'];
+			for (var i = 0; i < entities.length; i++) {
+				if (entities[i]['name'].endsWith('catalogItem')) {
+					var matchingSegments = entities[i]['matchingSegments'];
+					for (var j = 0; j < matchingSegments.length; j++)
+						answer.addSearchPhrases([matchingSegments[j]['value']]);
+				}
+			}
+		}
+	}
+
+	return answer;
+}]]></script>
+        <sys_class_name>ais_genius_result_configuration</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:18</sys_created_on>
+        <sys_id>21a36fb680c645106958c55942eeed29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Registration Genius Results</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>ais_genius_result_configuration_21a36fb680c645106958c55942eeed29</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:18</sys_updated_on>
+        <term/>
+        <trigger_condition>intent</trigger_condition>
+    </ais_genius_result_configuration>
+</record_update>

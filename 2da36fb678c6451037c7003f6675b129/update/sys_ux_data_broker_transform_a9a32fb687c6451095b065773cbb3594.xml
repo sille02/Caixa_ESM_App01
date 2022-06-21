@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_snc_we_volunteer.Create Attendeee Record RSVP-Waitlist</api_name>
+        <description>Used to create an attendee record for the current user.</description>
+        <mutates_server_data>true</mutates_server_data>
+        <name>Create Attendeee Record RSVP-Waitlist</name>
+        <output_schema/>
+        <private>false</private>
+        <props>[&#13;
+{&#13;
+  "name": "recordId",&#13;
+  "label": "Record",&#13;
+  "description": "Record to look up",&#13;
+  "readOnly": false,&#13;
+  "fieldType": "reference",&#13;
+  "mandatory": true,&#13;
+  "defaultValue": "",&#13;
+  "typeMetadata": {"reference": "@table"}&#13;
+}&#13;
+]</props>
+        <required_translations>[{"message":"Record to look up","comment":""},{"message":"Record","comment":""}]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function transform(input) {
+    var recordSysId = input.recordId || '';
+    if (recordSysId !== '') {
+        var attendeeGr = new GlideRecord('x_snc_we_volunteer_attendee');
+        attendeeGr.initialize();
+        attendeeGr.attendee_name = gs.getUserID();
+        attendeeGr.event_name = recordSysId;
+        attendeeGr.insert();
+    }
+}]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:11</sys_created_on>
+        <sys_id>a9a32fb687c6451095b065773cbb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Attendeee Record RSVP-Waitlist</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_a9a32fb687c6451095b065773cbb3594</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:11</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=a9a32fb687c6451095b065773cbb3594"/>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_master_item">
+    <sys_sg_item_stream_m2m_master_item action="INSERT_OR_UPDATE">
+        <item_stream display_value="My Events Item Stream">e5a32fb61fc64510417a9bf60d1d55d6</item_stream>
+        <master_item display_value="My Events Main Item">61a32fb635c645108a0130e97fe217d6</master_item>
+        <sys_class_name>sys_sg_item_stream_m2m_master_item</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:44</sys_created_on>
+        <sys_id>ada32fb6ffc64510c4f50712fd2c94d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_master_item_ada32fb6ffc64510c4f50712fd2c94d5</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:44</sys_updated_on>
+    </sys_sg_item_stream_m2m_master_item>
+</record_update>

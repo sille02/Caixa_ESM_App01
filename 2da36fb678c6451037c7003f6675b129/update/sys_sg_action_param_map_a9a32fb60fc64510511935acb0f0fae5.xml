@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="Criar Evento">eda32fb6e8c64510de0d84846a2142e6</button>
+        <item_parameter display_value="Waitlist">eda32fb632c64510a704f38102d19ae5</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:56</sys_created_on>
+        <sys_id>a9a32fb60fc64510511935acb0f0fae5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>eda32fb632c64510a704f38102d19ae5</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_a9a32fb60fc64510511935acb0f0fae5</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:56</sys_updated_on>
+        <ui_parameter display_value="Waitlist size">61a32fb607c6451026a882a5bd400ce5</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

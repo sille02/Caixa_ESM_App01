@@ -1,0 +1,2548 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-sandiego-12-22-2021__patch3-hotfix3-06-04-2022_06-04-2022_2232.zip</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a scheduled flow runs every 3 mins. This flow is responsible for processing all pending requests</description>
+        <internal_name>event_registration_process</internal_name>
+        <label_cache>[{"name":"593fa564-cbb9-44ea-a15f-586f2005734d.table_name","label":"18➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"593fa564-cbb9-44ea-a15f-586f2005734d.record","label":"18➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4e460fd-45a3-4f29-b844-ba8bf07e920c.table_name","label":"16➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4e460fd-45a3-4f29-b844-ba8bf07e920c.record","label":"16➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Count","label":"15➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Table","label":"15➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Records","label":"15➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68cd7154-321c-4fb0-89fa-1586ad58432c.table_name","label":"14➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68cd7154-321c-4fb0-89fa-1586ad58432c.record","label":"14➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"252eb305-412c-4972-8d4b-c0e2f17c4d99.table_name","label":"12➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"252eb305-412c-4972-8d4b-c0e2f17c4d99.record","label":"12➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Count","label":"11➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Table","label":"11➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Records","label":"11➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ad238b0a-9194-44df-83fd-ffb5eba9c84c.table_name","label":"10➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ad238b0a-9194-44df-83fd-ffb5eba9c84c.record","label":"10➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlisted","label":"2➛Event Record➛Waitlisted","reference":"","reference_display":"Waitlisted","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"waitlisted"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size","label":"2➛Event Record➛Waitlist size","reference":"","reference_display":"Waitlist size","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"waitlist_size"},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Records","label":"1➛Event Records","reference":"x_snc_event_reg_event","reference_display":"Event","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Table","label":"1➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4cd40b3-480f-48a8-a523-a5cb83d59b6f.approval_state","label":"2➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item","label":"2➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Records","label":"3➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Table","label":"3➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id","label":"2➛Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_event_reg_event","column_name":"sys_id"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity","label":"2➛Event Record➛Capacity","reference":"","reference_display":"Capacity","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"capacity"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.attendees","label":"2➛Event Record➛Attendees","reference":"","reference_display":"Attendees","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"attendees"},{"name":"358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item","label":"4➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f.record","label":"6➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f.table_name","label":"6➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Records","label":"7➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Table","label":"7➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Count","label":"7➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160013f7-3742-442c-b8e5-156b04cc941b.record","label":"8➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160013f7-3742-442c-b8e5-156b04cc941b.table_name","label":"8➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>e1a36fb6f9c64510bab7b5ee2085ad0e</master_snapshot>
+        <name>Event Registration Process flow</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>21a36fb6bec64510c1784a2aa314690e</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>65a36fb6afc6451038e371695491a60e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Event Registration Process flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_hub_flow_65a36fb6afc6451038e371695491a60e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-09 21:31:34</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=65a36fb6afc6451038e371695491a60e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=65a36fb6afc6451038e371695491a60e"/>
+    <sys_flow_timer_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <day_of_month>1</day_of_month>
+        <day_of_week/>
+        <name/>
+        <run_period>1970-01-01 00:03:00</run_period>
+        <run_start>2021-03-26 14:00:16</run_start>
+        <sys_class_name>sys_flow_timer_trigger</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21a36fb6bec64510c1784a2aa314690e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <time/>
+        <timer_type>1</timer_type>
+    </sys_flow_timer_trigger>
+    <sys_flow_trigger_auto_script action="delete_multiple" query="name=Trigger:21a36fb6bec64510c1784a2aa314690e^sys_idNOT IN61a36fb6e7c645107692554b61744c0e"/>
+    <sys_flow_trigger_auto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <name>Trigger:21a36fb6bec64510c1784a2aa314690e</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="">maint</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period>1970-01-01 00:03:00</run_period>
+        <run_start>2021-03-26 14:00:17</run_start>
+        <run_time/>
+        <run_type>periodically</run_type>
+        <script><![CDATA[sn_flow_trigger.FlowTriggerAPI.fireTimerTrigger('21a36fb6bec64510c1784a2aa314690e');]]></script>
+        <sys_class_name>sys_flow_trigger_auto_script</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>61a36fb6e7c645107692554b61744c0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <time_zone/>
+        <trigger display_value="">21a36fb6bec64510c1784a2aa314690e</trigger>
+        <upgrade_safe>true</upgrade_safe>
+    </sys_flow_trigger_auto_script>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=65a36fb6afc6451038e371695491a60e^sys_idNOT INa1a36fb68dc6451026c064413b54fd0e"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Runs every 3 minutes</comment>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <name>Repeat</name>
+        <remote_sys_id/>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>a1a36fb68dc6451026c064413b54fd0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <trigger_definition display_value="Repetição">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a1a36fb68dc6451026c064413b54fd0e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a1a36fb68dc6451026c064413b54fd0e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>6da36fb6bcc645104e6c690148f82c0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>1970-01-01 00:03:00</value>
+        <variable display_value="Repeat">1c5f4d94c32222002841b63b12d3aeb3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_f63f0d94c32222002841b63b12d3aeed^id=a1a36fb68dc6451026c064413b54fd0e"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=65a36fb6afc6451038e371695491a60e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=65a36fb6afc6451038e371695491a60e^sys_idNOT INada36fb6e9c64510681596e392dcde0d"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>65a36fb6afc6451038e371695491a60e</id>
+        <name>Event Registration Process</name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>ada36fb6e9c64510681596e392dcde0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ada36fb6e9c64510681596e392dcde0d"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=65a36fb6afc6451038e371695491a60e^sys_idNOT IN29a36fb6adc64510349419224cf7150c,2da36fb69ac645101a55d5f00b26260b,61a36fb685c64510793322572fb2c70b,65a36fb63bc64510902ac7230e72390d,69a36fb67cc6451021450b9a6d76060d,69a36fb6a2c645102bdd36e729aafa0b,6da36fb66fc6451099bda18cb4f3740b,ada36fb609c645108744e08e2bf8350c,ada36fb63ac64510f16b0fb9d49d3b0b,eda36fb68ec6451021a7c4fb14a4db0c,eda36fb6a0c6451054a0b7cfe93c470a,eda36fb6e6c64510975f00bca3be600d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>6</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb6adc64510349419224cf7150c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:23</sys_updated_on>
+        <ui_id>a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=29a36fb6adc64510349419224cf7150c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29a36fb6adc64510349419224cf7150c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb654c6451051d1859a81965e0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=confirmed</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29a36fb6adc64510349419224cf7150c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb656c64510f1825e96f4b52c0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=29a36fb6adc64510349419224cf7150c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>29a36fb6adc64510349419224cf7150c</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb627c6451010fb578e3f14d80b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=29a36fb6adc64510349419224cf7150c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=29a36fb6adc64510349419224cf7150c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>12</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb69ac645101a55d5f00b26260b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>252eb305-412c-4972-8d4b-c0e2f17c4d99</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2da36fb69ac645101a55d5f00b26260b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb69ac645101a55d5f00b26260b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb687c645104a3fe7742d05490c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2da36fb69ac645101a55d5f00b26260b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>2da36fb69ac645101a55d5f00b26260b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb640c64510e5bb32f51bccdc0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>2da36fb69ac645101a55d5f00b26260b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb636c645102f18b659d26fa30c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>waitlisted={{dab8ff35-b2b3-419a-8769-2ad197b1b721.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2da36fb69ac645101a55d5f00b26260b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2da36fb69ac645101a55d5f00b26260b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>7</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb685c64510793322572fb2c70b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:23</sys_updated_on>
+        <ui_id>a21f8907-515d-493d-8c0b-88048c166895</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=61a36fb685c64510793322572fb2c70b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>61a36fb685c64510793322572fb2c70b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb69cc64510f9aee015fbb2310b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>61a36fb685c64510793322572fb2c70b</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb6abc64510b7c2f0051d76d00a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>61a36fb685c64510793322572fb2c70b</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb6ebc6451088c1105300c34c0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value/>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=61a36fb685c64510793322572fb2c70b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>61a36fb685c64510793322572fb2c70b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb61dc64510293f7136d4b8bc0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=confirmed^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>61a36fb685c64510793322572fb2c70b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb6eac64510495284778a97ec0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=61a36fb685c64510793322572fb2c70b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=61a36fb685c64510793322572fb2c70b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>8</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>65a36fb63bc64510902ac7230e72390d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:23</sys_updated_on>
+        <ui_id>160013f7-3742-442c-b8e5-156b04cc941b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=65a36fb63bc64510902ac7230e72390d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>65a36fb63bc64510902ac7230e72390d</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>a1a36fb607c6451079c2bc9eaaeb670d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=65a36fb63bc64510902ac7230e72390d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>65a36fb63bc64510902ac7230e72390d</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>25a36fb6c0c64510fe12ce88cae8e60d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>65a36fb63bc64510902ac7230e72390d</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>61a36fb6d1c645102e512d11f0b5350d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>attendees={{a21f8907-515d-493d-8c0b-88048c166895.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=65a36fb63bc64510902ac7230e72390d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=65a36fb63bc64510902ac7230e72390d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>15</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>69a36fb67cc6451021450b9a6d76060d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>4720e003-8c42-4069-af66-6192c1160347</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69a36fb67cc6451021450b9a6d76060d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb67cc6451021450b9a6d76060d</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>29a36fb607c6451018dd9eccaa9c070d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>100000</value>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb67cc6451021450b9a6d76060d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>a5a36fb632c6451098b74595b51e140d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb67cc6451021450b9a6d76060d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>e5a36fb6b2c64510b1caae1de452fb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69a36fb67cc6451021450b9a6d76060d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>69a36fb67cc6451021450b9a6d76060d</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>e1a36fb63ac6451002b00e1e71aa830d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=waitlisted^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69a36fb67cc6451021450b9a6d76060d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=69a36fb67cc6451021450b9a6d76060d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>11</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6a2c645102bdd36e729aafa0b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>dab8ff35-b2b3-419a-8769-2ad197b1b721</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69a36fb6a2c645102bdd36e729aafa0b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb6a2c645102bdd36e729aafa0b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb63ec64510afdc6b647a09960b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb6a2c645102bdd36e729aafa0b</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb620c64510750089ef8af6180b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value/>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69a36fb6a2c645102bdd36e729aafa0b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>69a36fb6a2c645102bdd36e729aafa0b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb637c6451024f0751483c75e0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=waitlisted^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>69a36fb6a2c645102bdd36e729aafa0b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb601c64510459fe1b072dae60b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69a36fb6a2c645102bdd36e729aafa0b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=69a36fb6a2c645102bdd36e729aafa0b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>14</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb66fc6451099bda18cb4f3740b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>68cd7154-321c-4fb0-89fa-1586ad58432c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6da36fb66fc6451099bda18cb4f3740b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6da36fb66fc6451099bda18cb4f3740b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb6f5c64510020e47b6a3836d0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=waitlisted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6da36fb66fc6451099bda18cb4f3740b</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb691c6451096922ccbf0c3230c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6da36fb66fc6451099bda18cb4f3740b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>6da36fb66fc6451099bda18cb4f3740b</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb6a7c6451010a4e0ca343a880c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6da36fb66fc6451099bda18cb4f3740b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6da36fb66fc6451099bda18cb4f3740b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>10</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>ada36fb609c645108744e08e2bf8350c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>ad238b0a-9194-44df-83fd-ffb5eba9c84c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ada36fb609c645108744e08e2bf8350c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ada36fb609c645108744e08e2bf8350c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb610c645104a86e4df721d810d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=waitlisted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ada36fb609c645108744e08e2bf8350c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>6da36fb6dac645104b8aa8267669790c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ada36fb609c645108744e08e2bf8350c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>ada36fb609c645108744e08e2bf8350c</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb6b4c645108bff8e120296760c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ada36fb609c645108744e08e2bf8350c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ada36fb609c645108744e08e2bf8350c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment>Look all published/re-scheduled events</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb63ac64510f16b0fb9d49d3b0b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:23</sys_updated_on>
+        <ui_id>9a179015-9a03-4201-a6e4-8f716e1f409c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ada36fb63ac64510f16b0fb9d49d3b0b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ada36fb63ac64510f16b0fb9d49d3b0b</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb6bcc64510989c6da10da9e50b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>ada36fb63ac64510f16b0fb9d49d3b0b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb6e7c64510efb36d1f4dc87c0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=ada36fb63ac64510f16b0fb9d49d3b0b"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ada36fb63ac64510f16b0fb9d49d3b0b^sys_idNOT INe5a36fb661c645108778db196a07dd0b"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>conditions</input_name>
+        <instance>ada36fb63ac64510f16b0fb9d49d3b0b</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"conditions":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n**\n**Requires GlideRecord encodedQuery response, example:\n**\"active\u003dtrue^short_descriptionSTARTSWITHtest\";\n*/\nreturn \"date_to\u003e\u003djavascript:gs.beginningOfToday()^stateIN1,2\";"}}</script>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb661c645108778db196a07dd0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ada36fb63ac64510f16b0fb9d49d3b0b"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>16</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb68ec6451021a7c4fb14a4db0c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>c4e460fd-45a3-4f29-b844-ba8bf07e920c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=eda36fb68ec6451021a7c4fb14a4db0c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb68ec6451021a7c4fb14a4db0c</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb6d7c6451054bd5f522b4e0d0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=eda36fb68ec6451021a7c4fb14a4db0c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>eda36fb68ec6451021a7c4fb14a4db0c</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb66cc64510a0cf60f90723340c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>eda36fb68ec6451021a7c4fb14a4db0c</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6b5c64510797eb73fe835c50c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>waitlisted={{4720e003-8c42-4069-af66-6192c1160347.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=eda36fb68ec6451021a7c4fb14a4db0c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eda36fb68ec6451021a7c4fb14a4db0c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>18</order>
+        <parent_ui_id>78326d70-f7a3-4a35-8ad3-81a32d0abdb2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb6a0c6451054a0b7cfe93c470a</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:24</sys_updated_on>
+        <ui_id>593fa564-cbb9-44ea-a15f-586f2005734d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=eda36fb6a0c6451054a0b7cfe93c470a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb6a0c6451054a0b7cfe93c470a</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb60cc6451030e747d6f2f9560a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=on_hold</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb6a0c6451054a0b7cfe93c470a</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb65cc645107c3f30dbde237e0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=eda36fb6a0c6451054a0b7cfe93c470a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>eda36fb6a0c6451054a0b7cfe93c470a</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb6cdc6451000960d344eae510a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=eda36fb6a0c6451054a0b7cfe93c470a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eda36fb6a0c6451054a0b7cfe93c470a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent/>
+        <comment>Look for all pending attendees</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <order>3</order>
+        <parent_ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>eda36fb6e6c64510975f00bca3be600d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-06-11 08:24:23</sys_updated_on>
+        <ui_id>dd21b77f-5642-4386-8b4f-7e0713c85575</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=eda36fb6e6c64510975f00bca3be600d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb6e6c64510975f00bca3be600d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>2da36fb66ec645103416f650503a420d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb6e6c64510975f00bca3be600d</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>e9a36fb6fec64510bede29e0fbde550d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=eda36fb6e6c64510975f00bca3be600d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>eda36fb6e6c64510975f00bca3be600d</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:42</sys_created_on>
+        <sys_id>a9a36fb630c6451063d21d89de76cb0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=pending_registration^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=eda36fb6e6c64510975f00bca3be600d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eda36fb6e6c64510975f00bca3be600d"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=65a36fb6afc6451038e371695491a60e^sys_idNOT IN21a36fb635c645108f8a83a5f81a9f0a,69a36fb649c645106a90a8f2ef293609,69a36fb6aec6451026cf8608dc95e50a,6da36fb6b7c645103ac4316a7c37e209,e5a36fb6c2c64510720117ffc81a110a,eda36fb6e6c64510ed1ae51b06c56709"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e1a36fb637c64510b7a2d9004ddeee0a</block>
+        <comment/>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Senão">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb635c645108f8a83a5f81a9f0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=21a36fb635c645108f8a83a5f81a9f0a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>21a36fb635c645108f8a83a5f81a9f0a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb613c645103749acec1bf8610a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Waitlistsize is -1</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=21a36fb635c645108f8a83a5f81a9f0a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>21a36fb635c645108f8a83a5f81a9f0a</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb652c64510b932885aa9915b0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}=-1</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=21a36fb635c645108f8a83a5f81a9f0a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=21a36fb635c645108f8a83a5f81a9f0a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a5a36fb66ac645109f3a0d09e8045a09</block>
+        <comment/>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Senão">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb649c645106a90a8f2ef293609</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=69a36fb649c645106a90a8f2ef293609"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>69a36fb649c645106a90a8f2ef293609</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb668c64510a2803096802df509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Waitlistsize is available</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69a36fb649c645106a90a8f2ef293609"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>69a36fb649c645106a90a8f2ef293609</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb6d9c6451074a3772da2d57409</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}&gt;{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlisted}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=69a36fb649c645106a90a8f2ef293609"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69a36fb649c645106a90a8f2ef293609"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a5a36fb6c2c64510d4ba51f48827710a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Se">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6aec6451026cf8608dc95e50a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=69a36fb6aec6451026cf8608dc95e50a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>69a36fb6aec6451026cf8608dc95e50a</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb617c645109197a53beb88220a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Capacity is available </value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69a36fb6aec6451026cf8608dc95e50a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>69a36fb6aec6451026cf8608dc95e50a</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb62bc645101d0f5f6e3b84610a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.attendees}}&lt;{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=69a36fb6aec6451026cf8608dc95e50a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69a36fb6aec6451026cf8608dc95e50a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2da36fb6fcc645104df3f35304563809</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Para cada">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb6b7c645103ac4316a7c37e209</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6da36fb6b7c645103ac4316a7c37e209"/>
+    <sys_element_mapping action="delete_multiple" query="id=6da36fb6b7c645103ac4316a7c37e209"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>6da36fb6b7c645103ac4316a7c37e209</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb68bc64510c8d2b6af46ebe509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{9a179015-9a03-4201-a6e4-8f716e1f409c.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6da36fb6b7c645103ac4316a7c37e209"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6da36fb6b7c645103ac4316a7c37e209"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">29a36fb668c645106a1785fa65f0cb0a</block>
+        <comment>Capacity and waitlist is not available</comment>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Outro">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb6c2c64510720117ffc81a110a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>78326d70-f7a3-4a35-8ad3-81a32d0abdb2</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e5a36fb6c2c64510720117ffc81a110a"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e5a36fb6c2c64510720117ffc81a110a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e5a36fb6c2c64510720117ffc81a110a"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e9a36fb6bac645105696e86bd8c7e909</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Para cada">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb6e6c64510ed1ae51b06c56709</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=eda36fb6e6c64510ed1ae51b06c56709"/>
+    <sys_element_mapping action="delete_multiple" query="id=eda36fb6e6c64510ed1ae51b06c56709"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>eda36fb6e6c64510ed1ae51b06c56709</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb6f6c645101be7fc31d0295e09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{dd21b77f-5642-4386-8b4f-7e0713c85575.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=eda36fb6e6c64510ed1ae51b06c56709"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=eda36fb6e6c64510ed1ae51b06c56709"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=65a36fb6afc6451038e371695491a60e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_65a36fb6afc6451038e371695491a60e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_65a36fb6afc6451038e371695491a60e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_65a36fb6afc6451038e371695491a60e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_65a36fb6afc6451038e371695491a60e"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=65a36fb6afc6451038e371695491a60e^sys_idNOT IN65a36fb637c645103f833367c4a70b09"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"65a36fb637c645103f833367c4a70b09","name":"plan","plan_signature":null}}</plan>
+        <plan_id>65a36fb6afc6451038e371695491a60e</plan_id>
+        <snapshot>556ff6411b401110909c2fc13b4bcb59</snapshot>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>65a36fb637c645103f833367c4a70b09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <trigger display_value="">21a36fb6bec64510c1784a2aa314690e</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=65a36fb6afc6451038e371695491a60e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>This is a scheduled flow runs every 3 mins. This flow is responsible for processing all pending requests</description>
+        <internal_name>event_registration_process_flow</internal_name>
+        <label_cache>[{"name":"593fa564-cbb9-44ea-a15f-586f2005734d.table_name","label":"18➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"593fa564-cbb9-44ea-a15f-586f2005734d.record","label":"18➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4e460fd-45a3-4f29-b844-ba8bf07e920c.table_name","label":"16➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4e460fd-45a3-4f29-b844-ba8bf07e920c.record","label":"16➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Count","label":"15➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Table","label":"15➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4720e003-8c42-4069-af66-6192c1160347.Records","label":"15➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68cd7154-321c-4fb0-89fa-1586ad58432c.table_name","label":"14➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"68cd7154-321c-4fb0-89fa-1586ad58432c.record","label":"14➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"252eb305-412c-4972-8d4b-c0e2f17c4d99.table_name","label":"12➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"252eb305-412c-4972-8d4b-c0e2f17c4d99.record","label":"12➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Count","label":"11➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Table","label":"11➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dab8ff35-b2b3-419a-8769-2ad197b1b721.Records","label":"11➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ad238b0a-9194-44df-83fd-ffb5eba9c84c.table_name","label":"10➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ad238b0a-9194-44df-83fd-ffb5eba9c84c.record","label":"10➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlisted","label":"2➛Event Record➛Waitlisted","reference":"","reference_display":"Waitlisted","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"waitlisted"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size","label":"2➛Event Record➛Waitlist size","reference":"","reference_display":"Waitlist size","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"waitlist_size"},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Records","label":"1➛Event Records","reference":"x_snc_event_reg_event","reference_display":"Event","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Table","label":"1➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9a179015-9a03-4201-a6e4-8f716e1f409c.Count","label":"1➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c4cd40b3-480f-48a8-a523-a5cb83d59b6f.approval_state","label":"2➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item","label":"2➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Records","label":"3➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Table","label":"3➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"dd21b77f-5642-4386-8b4f-7e0713c85575.Count","label":"3➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id","label":"2➛Event Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_snc_event_reg_event","column_name":"sys_id"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity","label":"2➛Event Record➛Capacity","reference":"","reference_display":"Capacity","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"capacity"},{"name":"ee2aee8b-bda9-44d9-a905-778f6f21e179.item.attendees","label":"2➛Event Record➛Attendees","reference":"","reference_display":"Attendees","type":"integer","base_type":"integer","parent_table_name":"x_snc_event_reg_event","column_name":"attendees"},{"name":"358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item","label":"4➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f.record","label":"6➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f.table_name","label":"6➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Records","label":"7➛Attendee Records","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Table","label":"7➛Attendee Table","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a21f8907-515d-493d-8c0b-88048c166895.Count","label":"7➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160013f7-3742-442c-b8e5-156b04cc941b.record","label":"8➛Event Record","reference":"x_snc_event_reg_event","reference_display":"Event","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"160013f7-3742-442c-b8e5-156b04cc941b.table_name","label":"8➛Event Table","reference":"x_snc_event_reg_event","reference_display":"Event","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Event Registration Process flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Event Registration Process flow">65a36fb6afc6451038e371695491a60e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e1a36fb6f9c64510bab7b5ee2085ad0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=e1a36fb6f9c64510bab7b5ee2085ad0e^sys_idNOT INa1a36fb63bc64510c7dc44b110e13909"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Runs every 3 minutes</comment>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <name>Repeat</name>
+        <remote_sys_id/>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb63bc64510c7dc44b110e13909</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <trigger_definition display_value="Repetição">f63f0d94c32222002841b63b12d3aeed</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>repeat</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a1a36fb63bc64510c7dc44b110e13909"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>a1a36fb63bc64510c7dc44b110e13909</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb663c645104499695db43c2b09</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>1970-01-01 00:03:00</value>
+        <variable display_value="Repeat">1c5f4d94c32222002841b63b12d3aeb3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_input_f63f0d94c32222002841b63b12d3aeed^id=a1a36fb63bc64510c7dc44b110e13909"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e1a36fb6f9c64510bab7b5ee2085ad0e^sys_idNOT INeda36fb6e6c64510bcbce1dbd2d40908"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e1a36fb6f9c64510bab7b5ee2085ad0e</id>
+        <name>Event Registration Process flow</name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb6e6c64510bcbce1dbd2d40908</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=eda36fb6e6c64510bcbce1dbd2d40908"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=e1a36fb6f9c64510bab7b5ee2085ad0e^sys_idNOT IN21a36fb6eac645109e0d688d82a3cd07,25a36fb6c8c645102917e228a20d0306,29a36fb64ac645108625b202a4308007,2da36fb63dc64510d059c731d49de106,2da36fb6d5c64510c10eca95a9559a08,61a36fb6c5c64510c81d56b923db7f06,69a36fb6bcc645102f48e976a3c6e806,6da36fb645c645107c61a7a87c2b7608,a5a36fb644c6451095077c9bed11c208,e1a36fb65cc645101eeabe968f370108,e5a36fb637c64510f2e5db70f0995407,eda36fb690c64510e0ecbb5dec2a2c07"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>18</order>
+        <parent_ui_id>78326d70-f7a3-4a35-8ad3-81a32d0abdb2</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb6eac645109e0d688d82a3cd07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>593fa564-cbb9-44ea-a15f-586f2005734d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=21a36fb6eac645109e0d688d82a3cd07"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>21a36fb6eac645109e0d688d82a3cd07</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb65bc64510f4ca12c450655606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>21a36fb6eac645109e0d688d82a3cd07</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb688c64510efcadea560a1a206</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=on_hold</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=21a36fb6eac645109e0d688d82a3cd07"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>21a36fb6eac645109e0d688d82a3cd07</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb655c64510d250e68f00af6f07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=21a36fb6eac645109e0d688d82a3cd07"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=21a36fb6eac645109e0d688d82a3cd07"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>8</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb6c8c645102917e228a20d0306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>160013f7-3742-442c-b8e5-156b04cc941b</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=25a36fb6c8c645102917e228a20d0306"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>25a36fb6c8c645102917e228a20d0306</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb61dc64510ef4bd6a78301c606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=25a36fb6c8c645102917e228a20d0306"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>25a36fb6c8c645102917e228a20d0306</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb690c6451042a4b99648b3fe06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>25a36fb6c8c645102917e228a20d0306</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb670c64510b96eea8ae5235906</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>attendees={{a21f8907-515d-493d-8c0b-88048c166895.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=25a36fb6c8c645102917e228a20d0306"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=25a36fb6c8c645102917e228a20d0306"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Pesquisar registros">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Look for all pending attendees</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>3</order>
+        <parent_ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb64ac645108625b202a4308007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>dd21b77f-5642-4386-8b4f-7e0713c85575</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=29a36fb64ac645108625b202a4308007"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29a36fb64ac645108625b202a4308007</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6e2c64510ee7052d64625c707</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>29a36fb64ac645108625b202a4308007</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb64fc64510dac7db336ec01507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=29a36fb64ac645108625b202a4308007"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>29a36fb64ac645108625b202a4308007</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb64ec6451056f190a7d41ab707</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=pending_registration^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=29a36fb64ac645108625b202a4308007"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=29a36fb64ac645108625b202a4308007"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>14</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb63dc64510d059c731d49de106</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>68cd7154-321c-4fb0-89fa-1586ad58432c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2da36fb63dc64510d059c731d49de106"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb63dc64510d059c731d49de106</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb619c64510af58f499ff56c306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=waitlisted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb63dc64510d059c731d49de106</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb6d1c645106aee631bcdd4f006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2da36fb63dc64510d059c731d49de106"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>2da36fb63dc64510d059c731d49de106</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb695c64510d39fb55de5099506</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2da36fb63dc64510d059c731d49de106"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2da36fb63dc64510d059c731d49de106"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Pesquisar registros">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>7</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb6d5c64510c10eca95a9559a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>a21f8907-515d-493d-8c0b-88048c166895</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2da36fb6d5c64510c10eca95a9559a08"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb6d5c64510c10eca95a9559a08</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6e1c6451008bc9c1c9b4e3c08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb6d5c64510c10eca95a9559a08</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb6a8c6451049158e30ef6bed08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value/>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2da36fb6d5c64510c10eca95a9559a08</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb6efc645108d2e5749f5bfde08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2da36fb6d5c64510c10eca95a9559a08"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>2da36fb6d5c64510c10eca95a9559a08</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb640c64510ddd221621d14b008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=confirmed^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>2da36fb6d5c64510c10eca95a9559a08</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb63fc64510285b17488f5a5c08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2da36fb6d5c64510c10eca95a9559a08"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2da36fb6d5c64510c10eca95a9559a08"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>16</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb6c5c64510c81d56b923db7f06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>c4e460fd-45a3-4f29-b844-ba8bf07e920c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=61a36fb6c5c64510c81d56b923db7f06"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>61a36fb6c5c64510c81d56b923db7f06</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb698c645102937d8509ca34705</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=61a36fb6c5c64510c81d56b923db7f06"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>61a36fb6c5c64510c81d56b923db7f06</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb6ecc645103e41c3a74036f505</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>61a36fb6c5c64510c81d56b923db7f06</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb6a2c645104df0f1572223fd06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>waitlisted={{4720e003-8c42-4069-af66-6192c1160347.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=61a36fb6c5c64510c81d56b923db7f06"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=61a36fb6c5c64510c81d56b923db7f06"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>12</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6bcc645102f48e976a3c6e806</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>252eb305-412c-4972-8d4b-c0e2f17c4d99</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69a36fb6bcc645102f48e976a3c6e806"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69a36fb6bcc645102f48e976a3c6e806</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb64ac6451093c9d6991ad35206</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69a36fb6bcc645102f48e976a3c6e806"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>69a36fb6bcc645102f48e976a3c6e806</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb63dc6451013845e8a2d61fd06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>69a36fb6bcc645102f48e976a3c6e806</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb6a5c645108eda1c639ed7e306</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>waitlisted={{dab8ff35-b2b3-419a-8769-2ad197b1b721.Count}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69a36fb6bcc645102f48e976a3c6e806"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=69a36fb6bcc645102f48e976a3c6e806"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Pesquisar registros">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>15</order>
+        <parent_ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb645c645107c61a7a87c2b7608</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>4720e003-8c42-4069-af66-6192c1160347</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6da36fb645c645107c61a7a87c2b7608"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6da36fb645c645107c61a7a87c2b7608</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb641c64510a6ef6b10485be309</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6da36fb645c645107c61a7a87c2b7608</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb696c645100af76e02999e8009</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>100000</value>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6da36fb645c645107c61a7a87c2b7608</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb606c6451025f3401958d39a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6da36fb645c645107c61a7a87c2b7608"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>6da36fb645c645107c61a7a87c2b7608</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb6ebc6451035605d6c18c22609</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=waitlisted^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6da36fb645c645107c61a7a87c2b7608"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6da36fb645c645107c61a7a87c2b7608"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Pesquisar registros">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment>Look all published/re-scheduled events</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb644c6451095077c9bed11c208</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>9a179015-9a03-4201-a6e4-8f716e1f409c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a5a36fb644c6451095077c9bed11c208"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a5a36fb644c6451095077c9bed11c208</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb6eec645104a11fee1cffc1008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>number</value>
+        <variable display_value="Order by">c7400a1587003300663ca1bb36cb0b55</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a5a36fb644c6451095077c9bed11c208</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb6cec645101eef9a98a5b76108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_event</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b^id=a5a36fb644c6451095077c9bed11c208"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a5a36fb644c6451095077c9bed11c208^sys_idNOT IN2da36fb606c64510adf45172e1877807"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>conditions</input_name>
+        <instance>a5a36fb644c6451095077c9bed11c208</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"conditions":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n**\n**Requires GlideRecord encodedQuery response, example:\n**\"active\u003dtrue^short_descriptionSTARTSWITHtest\";\n*/\nreturn \"date_to\u003e\u003djavascript:gs.beginningOfToday()^stateIN1,2\";"}}</script>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb606c64510adf45172e1877807</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a5a36fb644c6451095077c9bed11c208"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Pesquisar registros">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Pesquisar registros">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <comment/>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>11</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb65cc645101eeabe968f370108</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>dab8ff35-b2b3-419a-8769-2ad197b1b721</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e1a36fb65cc645101eeabe968f370108"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e1a36fb65cc645101eeabe968f370108</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb6b0c64510da5a1ebc9fc01808</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">8f400a1587003300663ca1bb36cb0b4b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e1a36fb65cc645101eeabe968f370108</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>ada36fb64bc64510ec7ead9040b3de07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value/>
+        <variable display_value="Max Results">4f400a1587003300663ca1bb36cb0b61</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e1a36fb65cc645101eeabe968f370108"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>e1a36fb65cc645101eeabe968f370108</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb611c64510451be93704516007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>attendee_status=waitlisted^event_name={{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_results</field>
+        <id>e1a36fb65cc645101eeabe968f370108</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb680c64510f669cffb5ff9ba07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_43400a1587003300663ca1bb36cb0b4b</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e1a36fb65cc645101eeabe968f370108"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e1a36fb65cc645101eeabe968f370108"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>10</order>
+        <parent_ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb637c64510f2e5db70f0995407</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>ad238b0a-9194-44df-83fd-ffb5eba9c84c</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e5a36fb637c64510f2e5db70f0995407"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e5a36fb637c64510f2e5db70f0995407</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb64cc645105e09cb3234004507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=waitlisted</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e5a36fb637c64510f2e5db70f0995407</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb6e9c64510026a9bc00e297d07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e5a36fb637c64510f2e5db70f0995407"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>e5a36fb637c64510f2e5db70f0995407</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb675c64510ef92e15ce905af07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e5a36fb637c64510f2e5db70f0995407"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e5a36fb637c64510f2e5db70f0995407"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Atualizar Registro">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Atualizar Registro">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <order>6</order>
+        <parent_ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>eda36fb690c64510e0ecbb5dec2a2c07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>a423b2e2-7036-40f3-ada5-f3d0f0dd4f5f</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=eda36fb690c64510e0ecbb5dec2a2c07"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb690c64510e0ecbb5dec2a2c07</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb635c64510406a3f852a415508</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>attendee_status=confirmed</value>
+        <variable display_value="Fields">02d01916c31332002841b63b12d3aeee</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>eda36fb690c64510e0ecbb5dec2a2c07</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb601c6451010a4f7a599a2a707</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=eda36fb690c64510e0ecbb5dec2a2c07"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>eda36fb690c64510e0ecbb5dec2a2c07</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a1a36fb642c64510abb1a7c2be459808</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{358ae1bf-30f4-4a2a-aeca-f023f4ee462e.item}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=eda36fb690c64510e0ecbb5dec2a2c07"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=eda36fb690c64510e0ecbb5dec2a2c07"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=e1a36fb6f9c64510bab7b5ee2085ad0e^sys_idNOT IN29a36fb600c64510d5644dfd75c3da05,61a36fb692c64510fa26ac119da2f405,6da36fb69dc64510b261b3c63e4e6c04,6da36fb6c0c645102b3006593ae49205,e1a36fb666c645108b49b1fb264ecb05,e5a36fb63fc64510989bbed1a929f805"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a5a36fb6c2c64510d4ba51f48827710a</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Se">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>29a36fb600c64510d5644dfd75c3da05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>b427a19d-8a79-4822-bd31-e060ac58f5d3</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=29a36fb600c64510d5644dfd75c3da05"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>29a36fb600c64510d5644dfd75c3da05</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>2da36fb627c645104b5bfd498fdef605</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Capacity is available </value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=29a36fb600c64510d5644dfd75c3da05"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>29a36fb600c64510d5644dfd75c3da05</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a9a36fb635c64510c73fe9a28df70a05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.attendees}}&lt;{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.capacity}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=29a36fb600c64510d5644dfd75c3da05"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=29a36fb600c64510d5644dfd75c3da05"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">2da36fb6fcc645104df3f35304563809</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Para cada">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>61a36fb692c64510fa26ac119da2f405</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=61a36fb692c64510fa26ac119da2f405"/>
+    <sys_element_mapping action="delete_multiple" query="id=61a36fb692c64510fa26ac119da2f405"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>61a36fb692c64510fa26ac119da2f405</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>21a36fb68bc645103538c2843eed9305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{9a179015-9a03-4201-a6e4-8f716e1f409c.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=61a36fb692c64510fa26ac119da2f405"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=61a36fb692c64510fa26ac119da2f405"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">29a36fb668c645106a1785fa65f0cb0a</block>
+        <comment>Capacity and waitlist is not available</comment>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Outro">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb69dc64510b261b3c63e4e6c04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>78326d70-f7a3-4a35-8ad3-81a32d0abdb2</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6da36fb69dc64510b261b3c63e4e6c04"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6da36fb69dc64510b261b3c63e4e6c04"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6da36fb69dc64510b261b3c63e4e6c04"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">a5a36fb66ac645109f3a0d09e8045a09</block>
+        <comment/>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Senão">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>6da36fb6c0c645102b3006593ae49205</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>48dfd891-0497-48ab-a3d0-649ed41678e8</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=6da36fb6c0c645102b3006593ae49205"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>6da36fb6c0c645102b3006593ae49205</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e9a36fb6e1c64510f222954a003c5705</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Waitlistsize is available</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6da36fb6c0c645102b3006593ae49205"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>6da36fb6c0c645102b3006593ae49205</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>69a36fb6ddc64510b880437ec4768f05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}&gt;{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlisted}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6da36fb6c0c645102b3006593ae49205"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6da36fb6c0c645102b3006593ae49205"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e1a36fb637c64510b7a2d9004ddeee0a</block>
+        <comment/>
+        <connected_to>b427a19d-8a79-4822-bd31-e060ac58f5d3</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Senão">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e1a36fb666c645108b49b1fb264ecb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>bb9b45fd-b6ca-437a-a1a1-e30970bda7ae</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e1a36fb666c645108b49b1fb264ecb05"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e1a36fb666c645108b49b1fb264ecb05</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>65a36fb6b0c64510c213ab3cc3d5d505</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <value>Waitlistsize is -1</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea2</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e1a36fb666c645108b49b1fb264ecb05"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e1a36fb666c645108b49b1fb264ecb05</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>25a36fb6cec64510432a05a5d8bed905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_666e5545c3e232002841b63b12d3ae99</table>
+        <value>{{ee2aee8b-bda9-44d9-a905-778f6f21e179.item.waitlist_size}}=-1</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e1a36fb666c645108b49b1fb264ecb05"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e1a36fb666c645108b49b1fb264ecb05"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e9a36fb6bac645105696e86bd8c7e909</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Event Registration Process flow">e1a36fb6f9c64510bab7b5ee2085ad0e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="Para cada">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>ee2aee8b-bda9-44d9-a905-778f6f21e179</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>e5a36fb63fc64510989bbed1a929f805</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <ui_id>358ae1bf-30f4-4a2a-aeca-f023f4ee462e</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e5a36fb63fc64510989bbed1a929f805"/>
+    <sys_element_mapping action="delete_multiple" query="id=e5a36fb63fc64510989bbed1a929f805"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>e5a36fb63fc64510989bbed1a929f805</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:43</sys_created_on>
+        <sys_id>a5a36fb6d2c645109b70b1c340fe7905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:43</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{dd21b77f-5642-4386-8b4f-7e0713c85575.Records}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e5a36fb63fc64510989bbed1a929f805"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e5a36fb63fc64510989bbed1a929f805"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e1a36fb6f9c64510bab7b5ee2085ad0e"/>
+    <sys_hub_flow action="update">
+        <sys_id>65a36fb6afc6451038e371695491a60e</sys_id>
+        <latest_snapshot>e1a36fb6f9c64510bab7b5ee2085ad0e</latest_snapshot>
+    </sys_hub_flow>
+</record_update>

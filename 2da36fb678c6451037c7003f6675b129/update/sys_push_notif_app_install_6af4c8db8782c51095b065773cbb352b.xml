@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
+    <sys_push_notif_app_install action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <last_registered_on>2022-03-10 08:30:39</last_registered_on>
+        <sys_class_name>sys_push_notif_app_install</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-10 08:30:39</sys_created_on>
+        <sys_id>6af4c8db8782c51095b065773cbb352b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>B4CC53D475A56E08144B488A332708874EA4647B49BD8E30D13E2FB4CBB461E8</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_push_application_id display_value="ServiceNow Request Application">ac7f61d273122300d63a566a4cf6a78b</sys_push_application_id>
+        <sys_push_platform_id display_value="Apple">20e71f30ff0002009738ffffffffff6b</sys_push_platform_id>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_push_notif_app_install_6af4c8db8782c51095b065773cbb352b</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-10 08:30:39</sys_updated_on>
+        <sys_user_id display_value="Eva Wickson">c57735ca1bd2385028a06208b04bcb95</sys_user_id>
+        <token>B4CC53D475A56E08144B488A332708874EA4647B49BD8E30D13E2FB4CBB461E8</token>
+    </sys_push_notif_app_install>
+</record_update>

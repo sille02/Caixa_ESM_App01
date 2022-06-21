@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile">
+    <ais_search_profile action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Profile used for searching Event Registration with AI Search </description>
+        <genius_result_assembly/>
+        <label>We volunteer - Event Registration Profile</label>
+        <name>x_snc_we_volunteer_event_registration_pr</name>
+        <publish_id>90623b19-b277-41ff-9183-e9d0f83f7dca</publish_id>
+        <state>PUBLISHED</state>
+        <sys_class_name>ais_search_profile</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:09</sys_created_on>
+        <sys_id>6da36fb6fac64510cea84bd9241cea28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>We volunteer - Event Registration Profile</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>ais_search_profile_6da36fb6fac64510cea84bd9241cea28</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:09</sys_updated_on>
+    </ais_search_profile>
+</record_update>

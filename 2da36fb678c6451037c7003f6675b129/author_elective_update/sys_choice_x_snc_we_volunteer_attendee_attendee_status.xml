@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="attendee_status" table="x_snc_we_volunteer_attendee" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>attendee_status</element>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>system</sys_created_by>
+            <sys_created_on>2022-03-10 10:35:00</sys_created_on>
+            <sys_id>5dd36bf687c6451095b065773cbb35e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>attendee_status</sys_name>
+            <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+            <sys_update_name>sys_choice_x_snc_we_volunteer_attendee_attendee_status</sys_update_name>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Processing Request</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ada36fb6e6c64510e825384f9ab7ac1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>pending_registration</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Registration Confirmed</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eda36fb6dac64510509b7ab701bcce1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>confirmed</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>On Waitlist</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2da36fb64cc64510120df442af78f41d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>waitlisted</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6da36fb65cc6451060d93cc30cba6b1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>cancelled</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancelled Waitlist</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69a36fb602c645100ea596483e810f1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>cancelled_waitlist</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Event ended</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e5a36fb632c64510ff099af99a60dd1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>event_ended</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>On hold</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a9a36fb6c5c6451096846f2c19c65b1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>on_hold</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Event Cancelled</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e9a36fb62fc6451032565c829b5b7d1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>event_cancelled</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>attendee_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Not submitted</label>
+            <language>en</language>
+            <name>x_snc_we_volunteer_attendee</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>eva</sys_created_by>
+            <sys_created_on>2022-03-09 11:27:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>29a36fb608c64510b8345d4086477b1d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>eva</sys_updated_by>
+            <sys_updated_on>2022-03-09 11:27:21</sys_updated_on>
+            <value>not_submitted</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

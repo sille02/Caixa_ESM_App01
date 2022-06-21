@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_we_volunteer.EventRegistrationDTformat</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>false</client_callable>
+        <description>Used in both the event registration workspace and portal to format a date/time string to a user friendly format</description>
+        <name>EventRegistrationDTformat</name>
+        <script><![CDATA[var EventRegistrationDTformat = Class.create();
+EventRegistrationDTformat.prototype = {
+    initialize: function() {},
+	//Pass in the date/time string to the function
+    formatDateTime: function(DatetimeValue) {
+		//Use GlideDateTime to separate the values to be formatted
+        var dt = new GlideDateTime(DatetimeValue);
+		
+		// Get the translated friendly date
+		var date = dt.getDate();
+		var dateFormated = date.date.getDisplayValue();
+		
+		// Get the friendly time format
+        var time = dt.getTime();
+        var timeFormated = (time.getUserFormattedLocalTime());
+		
+		//Build the user friendly format to be returned
+		var msgArr = [dateFormated, timeFormated];
+		var results = gs.getMessage('{0} at {1}', msgArr);
+		return results;
+
+    },
+
+    type: 'EventRegistrationDTformat'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:22</sys_created_on>
+        <sys_id>6da32fb6c6c645108a11d8794ec09cf2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EventRegistrationDTformat</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_script_include_6da32fb6c6c645108a11d8794ec09cf2</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

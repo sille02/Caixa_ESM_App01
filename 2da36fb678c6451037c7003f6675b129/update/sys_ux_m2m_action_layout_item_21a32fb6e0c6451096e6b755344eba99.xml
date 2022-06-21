@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_m2m_action_layout_item">
+    <sys_ux_m2m_action_layout_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <sys_class_name>sys_ux_m2m_action_layout_item</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:28</sys_created_on>
+        <sys_id>21a32fb6e0c6451096e6b755344eba99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_m2m_action_layout_item_21a32fb6e0c6451096e6b755344eba99</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:28</sys_updated_on>
+        <table>x_snc_we_volunteer_event_location</table>
+        <ux_form_action_layout display_value="Event Registration Locations layout">eda32fb64ac645107c9a09b0c6abee99</ux_form_action_layout>
+        <ux_form_action_layout_item display_value="Save Changes">ada32fb6c3c6451091f277617e7b6199</ux_form_action_layout_item>
+    </sys_ux_m2m_action_layout_item>
+</record_update>

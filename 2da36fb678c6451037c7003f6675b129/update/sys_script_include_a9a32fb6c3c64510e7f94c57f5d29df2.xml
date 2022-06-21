@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_snc_we_volunteer.EventRegistrationAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Called from client script (Get location info/Ensure End Date is after Start Date/Start date can't be in past)&#13;
+Used to verify that an event is not already scheduled at the selected location. </description>
+        <name>EventRegistrationAjax</name>
+        <script><![CDATA[var EventRegistrationAjax = Class.create();
+EventRegistrationAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getLocationData: function() {
+        //Call the utils script include and pass in the parameters below
+        var util = new x_snc_we_volunteer.EventRegistrationUtils();
+        var locationId = this.getParameter('sysparm_location_id');
+        var sysId = this.getParameter('sysparm_sys_id');
+        var start = this.getParameter('sysparm_start');
+        var end = this.getParameter('sysparm_end');
+
+		//Convert the display value of the start field which is in the user's timezone
+		//into a glide date time object in GMT, then pass the display of that to the script include
+		var gdtStart = new GlideDateTime(start);
+        var startTime = gdtStart.getTime(); //GMT time
+        var startTimeFormated = (startTime.getByFormat('hh:mm:ss'));
+		var startDate = gdtStart.getDate();
+        var generatedStartDate = gs.dateGenerate(startDate, startTimeFormated);
+		
+		//Convert the display value of the end field which is in the user's timezone
+		//into a glide date time object in GMT, then pass the display of that to the script include
+		var gdtEnd = new GlideDateTime(end);
+        var endTime = gdtEnd.getTime(); // GMT time
+        var endTimeFormated = (endTime.getByFormat('hh:mm:ss'));
+		var endDate = gdtEnd.getDate();
+        var generatedEndDate = gs.dateGenerate(endDate, endTimeFormated);
+		
+        return JSON.stringify(util.getLocationData(locationId, sysId, generatedStartDate, generatedEndDate));
+    },
+	
+	getLocationCapacity: function(){
+		//Call the utils script include and pass in the parameters below
+        var util = new x_snc_we_volunteer.EventRegistrationUtils();
+		var locationId = this.getParameter('sysparm_location_id');
+		return JSON.stringify(util.getLocationCapacity(locationId));
+	},
+
+    type: 'EventRegistrationAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:28</sys_created_on>
+        <sys_id>a9a32fb6c3c64510e7f94c57f5d29df2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EventRegistrationAjax</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_script_include_a9a32fb6c3c64510e7f94c57f5d29df2</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

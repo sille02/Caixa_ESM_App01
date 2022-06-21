@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_predicate_m2m_action_assignment">
+    <sys_ux_predicate_m2m_action_assignment action="INSERT_OR_UPDATE">
+        <declarative_action_assignment display_value="view_event">e1a36fb657c6451087e8ca454670e51b</declarative_action_assignment>
+        <predicate display_value="Event Reg Genius Config">2da32fb669c645104ff90a0c157d719b</predicate>
+        <sys_class_name>sys_ux_predicate_m2m_action_assignment</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:40</sys_created_on>
+        <sys_id>e9a32fb6b5c6451020f88c6fec070696</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_ux_predicate_m2m_action_assignment_e9a32fb6b5c6451020f88c6fec070696</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:40</sys_updated_on>
+    </sys_ux_predicate_m2m_action_assignment>
+</record_update>

@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Sends an email to attendees when they are added to the waitlist of an event</description>
+        <internal_name>send_waitlist_confirmation_email</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{}},{"name":"e31fd254-beff-458a-a2a6-8018d4e33bb4.email","label":"1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>a1a36fb6ddc6451063985a1edb4da701</master_snapshot>
+        <name>Send Waitlist Confirmation Email</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>21a36fb66ec645103af53510662d2a01</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>61a36fb643c64510d0f3d746892a4201</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Send Waitlist Confirmation Email</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_hub_flow_61a36fb643c64510d0f3d746892a4201</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-06-09 21:31:30</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_variable_value action="delete_multiple" query="document_key=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_we_volunteer_attendee">attendee_statusCHANGESTOwaitlisted<item display_value="On Waitlist" endquery="false" field="attendee_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="waitlisted"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21a36fb66ec645103af53510662d2a01</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table>x_snc_we_volunteer_attendee</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"e1a36fb6c3c64510c7d707e138616501","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>61a36fb643c64510d0f3d746892a4201</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e1a36fb6c3c64510c7d707e138616501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <trigger display_value="">21a36fb66ec645103af53510662d2a01</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>e1a36fb6c3c64510c7d707e138616501</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>eda36fb6cdc64510d2f7332aca6b4e00</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=61a36fb643c64510d0f3d746892a4201^sys_idNOT INe1a36fb6c3c64510c7d707e138616501"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=61a36fb643c64510d0f3d746892a4201^sys_idNOT INada36fb660c645107f6ff5ecd33b2000"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>When Attendee status changes to on waitlist</comment>
+        <display_text/>
+        <flow display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>ada36fb660c645107f6ff5ecd33b2000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <trigger_definition display_value="Atualizado em:">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=ada36fb660c645107f6ff5ecd33b2000"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>ada36fb660c645107f6ff5ecd33b2000</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>6da36fb664c64510ed62cc785cde5b00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>attendee_statusCHANGESTOwaitlisted</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>ada36fb660c645107f6ff5ecd33b2000</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a9a36fb6d2c645103284d3338af5ba00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>ada36fb660c645107f6ff5ecd33b2000</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e9a36fb654c6451046804c0f53f76f00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=ada36fb660c645107f6ff5ecd33b2000"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=61a36fb643c64510d0f3d746892a4201^sys_idNOT IN2da36fb60dc645106d604a8f0892bd00"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>61a36fb643c64510d0f3d746892a4201</id>
+        <name>Send Waitlist Confirmation Email</name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>2da36fb60dc645106d604a8f0892bd00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2da36fb60dc645106d604a8f0892bd00"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=61a36fb643c64510d0f3d746892a4201^sys_idNOT IN29a36fb682c64510005a584ec9d50300,69a36fb6a9c6451014f05d39d14a3400,e5a36fb699c645108307af2b0199f700"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</model>
+        <model_id>61a36fb643c64510d0f3d746892a4201</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>29a36fb682c64510005a584ec9d50300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</model>
+        <model_id>61a36fb643c64510d0f3d746892a4201</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>69a36fb6a9c6451014f05d39d14a3400</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD084dbb76a1432010c6ecc1b17f7b66ca,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</model>
+        <model_id>61a36fb643c64510d0f3d746892a4201</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e5a36fb699c645108307af2b0199f700</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=61a36fb643c64510d0f3d746892a4201^sys_idNOT IN65a36fb6f7c64510c49df6bc4ce48c00"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Enviar notificação">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent/>
+        <comment>Send email notification</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>65a36fb6f7c64510c49df6bc4ce48c00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <ui_id>f4d171f1-31c0-4316-8b1b-05a094dbcb4d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=65a36fb6f7c64510c49df6bc4ce48c00"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>65a36fb6f7c64510c49df6bc4ce48c00</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>25a36fb6d4c64510a307dc4e6f428900</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">818dd9f10f11101051218e8ebc767e32</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>65a36fb6f7c64510c49df6bc4ce48c00</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a5a36fb6d5c645102d86616db7b6a600</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>21a36fb637c64510e3e1d3fc52a58620</value>
+        <variable display_value="Notification">418dd9f10f11101051218e8ebc767e38</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=65a36fb6f7c64510c49df6bc4ce48c00"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>65a36fb6f7c64510c49df6bc4ce48c00</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a1a36fb650c64510c1954c0b44038300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=65a36fb6f7c64510c49df6bc4ce48c00"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=65a36fb6f7c64510c49df6bc4ce48c00"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201^sys_idNOT IN21a36fb6a5c6451043bc0b1932b19315,61a36fb662c64510286e684d2658ec16,e5a36fb6aec64510de3fa2df2cbbd215"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>21a36fb6a5c6451043bc0b1932b19315</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97183f323c432010f877f65c5aad33bd_table_name_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>61a36fb662c64510286e684d2658ec16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97183f323c432010f877f65c5aad33bd_changed_fields_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e5a36fb6aec64510de3fa2df2cbbd215</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_97183f323c432010f877f65c5aad33bd_current_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_61a36fb643c64510d0f3d746892a4201"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_61a36fb643c64510d0f3d746892a4201"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_61a36fb643c64510d0f3d746892a4201"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=61a36fb643c64510d0f3d746892a4201^sys_idNOT INe1a36fb6a2c645101c1aea548dc1b700"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan/>
+        <plan_id>61a36fb643c64510d0f3d746892a4201</plan_id>
+        <snapshot>a1a36fb6ddc6451063985a1edb4da701</snapshot>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e1a36fb6a2c645101c1aea548dc1b700</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <trigger display_value="">21a36fb66ec645103af53510662d2a01</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=61a36fb643c64510d0f3d746892a4201"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Sends an email to attendees when they are added to the waitlist of an event</description>
+        <internal_name>send_waitlist_confirmation_email</internal_name>
+        <label_cache>[{"name":"Updated_1.current","label":"Trigger➛Attendee Record","reference":"x_snc_event_reg_attendee","reference_display":"Attendee","type":"reference","base_type":"reference","attributes":{}},{"name":"e31fd254-beff-458a-a2a6-8018d4e33bb4.email","label":"1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Send Waitlist Confirmation Email</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Send Waitlist Confirmation Email">61a36fb643c64510d0f3d746892a4201</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1a36fb6ddc6451063985a1edb4da701</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_variable_value action="delete_multiple" query="document_key=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=a1a36fb6ddc6451063985a1edb4da701^sys_idNOT IN61a36fb6f5c6451091af3752da909300"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>When Attendee status changes to on waitlist</comment>
+        <display_text/>
+        <flow display_value="Send Waitlist Confirmation Email">a1a36fb6ddc6451063985a1edb4da701</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>61a36fb6f5c6451091af3752da909300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <trigger_definition display_value="Atualizado em:">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=61a36fb6f5c6451091af3752da909300"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>61a36fb6f5c6451091af3752da909300</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>21a36fb64bc64510b92b55d42abca000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>61a36fb6f5c6451091af3752da909300</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>ada32fb66ec64510a1d2d11fe64ae0ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>attendee_statusCHANGESTOwaitlisted</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>61a36fb6f5c6451091af3752da909300</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>eda32fb638c6451081c18b9b65a70eff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=61a36fb6f5c6451091af3752da909300"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=a1a36fb6ddc6451063985a1edb4da701^sys_idNOT IN6da32fb610c645100ca79bc4b9d509ff"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>a1a36fb6ddc6451063985a1edb4da701</id>
+        <name>Send Waitlist Confirmation Email</name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>6da32fb610c645100ca79bc4b9d509ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6da32fb610c645100ca79bc4b9d509ff"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=a1a36fb6ddc6451063985a1edb4da701^sys_idNOT IN2da32fb673c64510b3ac5f5a1daa18ff,69a32fb676c64510758f910ad2f15cff,e9a32fb6ebc64510452f0f3dc0527aff"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Send Waitlist Confirmation Email">a1a36fb6ddc6451063985a1edb4da701</model>
+        <model_id>a1a36fb6ddc6451063985a1edb4da701</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>2da32fb673c64510b3ac5f5a1daa18ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD6f3dbb7690432010c1cdc4dbd0a3a55f,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Send Waitlist Confirmation Email">a1a36fb6ddc6451063985a1edb4da701</model>
+        <model_id>a1a36fb6ddc6451063985a1edb4da701</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>69a32fb676c64510758f910ad2f15cff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Send Waitlist Confirmation Email">a1a36fb6ddc6451063985a1edb4da701</model>
+        <model_id>a1a36fb6ddc6451063985a1edb4da701</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e9a32fb6ebc64510452f0f3dc0527aff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=a1a36fb6ddc6451063985a1edb4da701^sys_idNOT INa9a32fb69dc645103ec0af8f105d4eff"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Enviar notificação">0d8dd9f10f11101051218e8ebc767e27</action_type>
+        <action_type_parent display_value="Enviar notificação">7eda5d710f11101051218e8ebc767ec1</action_type_parent>
+        <comment>Send email notification</comment>
+        <compiled_snapshot>0d8dd9f10f11101051218e8ebc767e27</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Send Waitlist Confirmation Email">a1a36fb6ddc6451063985a1edb4da701</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a9a32fb69dc645103ec0af8f105d4eff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <ui_id>f4d171f1-31c0-4316-8b1b-05a094dbcb4d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a9a32fb69dc645103ec0af8f105d4eff"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a9a32fb69dc645103ec0af8f105d4eff</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>29a32fb61ec64510339258aa41505fff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>21a36fb637c64510e3e1d3fc52a58620</value>
+        <variable display_value="Notification">418dd9f10f11101051218e8ebc767e38</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a9a32fb69dc645103ec0af8f105d4eff</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>e5a32fb60ac64510d8bce2d04b507cff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <value>x_snc_we_volunteer_attendee</value>
+        <variable display_value="Table">818dd9f10f11101051218e8ebc767e32</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a9a32fb69dc645103ec0af8f105d4eff"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>a9a32fb69dc645103ec0af8f105d4eff</id>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a5a32fb690c64510f84333e5b6481bff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0d8dd9f10f11101051218e8ebc767e27</table>
+        <value>{{Updated_1.current}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a9a32fb69dc645103ec0af8f105d4eff"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a9a32fb69dc645103ec0af8f105d4eff"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701^sys_idNOT IN69a36fb6b3c64510925af4674ab18c13,a9a36fb60ac64510034f44674ce18115,a9a36fb63bc645104083f294731c9612"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>69a36fb6b3c64510925af4674ab18c13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ab3dbb763c432010f877f65c5aad335e_current_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a9a36fb60ac64510034f44674ce18115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ab3dbb763c432010f877f65c5aad335e_changed_fields_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:27:13</sys_created_on>
+        <sys_id>a9a36fb63bc645104083f294731c9612</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_ab3dbb763c432010f877f65c5aad335e_table_name_en</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:27:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_a1a36fb6ddc6451063985a1edb4da701"/>
+    <sys_hub_flow action="update">
+        <sys_id>61a36fb643c64510d0f3d746892a4201</sys_id>
+        <latest_snapshot>a1a36fb6ddc6451063985a1edb4da701</latest_snapshot>
+    </sys_hub_flow>
+</record_update>

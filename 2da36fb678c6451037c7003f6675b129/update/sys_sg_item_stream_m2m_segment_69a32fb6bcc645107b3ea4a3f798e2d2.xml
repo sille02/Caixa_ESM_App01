@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_item_stream_m2m_segment">
+    <sys_sg_item_stream_m2m_segment action="INSERT_OR_UPDATE">
+        <item_stream display_value="All Events Item Stream">e1a32fb649c64510a76cede25c3483d6</item_stream>
+        <segment display_value="Segmento de Fluxo do Item">6da32fb6fec6451034b641863e9814d2</segment>
+        <sys_class_name>sys_sg_item_stream_m2m_segment</sys_class_name>
+        <sys_created_by>eva</sys_created_by>
+        <sys_created_on>2022-03-09 11:26:51</sys_created_on>
+        <sys_id>69a32fb6bcc645107b3ea4a3f798e2d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="We volunteer" source="x_snc_we_volunteer">2da36fb678c6451037c7003f6675b129</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="We volunteer">2da36fb678c6451037c7003f6675b129</sys_scope>
+        <sys_update_name>sys_sg_item_stream_m2m_segment_69a32fb6bcc645107b3ea4a3f798e2d2</sys_update_name>
+        <sys_updated_by>eva</sys_updated_by>
+        <sys_updated_on>2022-03-09 11:26:51</sys_updated_on>
+    </sys_sg_item_stream_m2m_segment>
+</record_update>
